@@ -1,0 +1,185 @@
+@font-face {
+    font-family: "MyFont";
+    src: url("../static/fonts/Arcade.ttf") format("truetype");
+  }
+
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    /* background-color: rgb(88, 88, 88); */
+    text-align: center;
+
+}
+
+.container {
+    margin-top: 90px;
+    width: 1000px;
+    /* background-color: rgb(131, 243, 168); */
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+
+
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+
+    }
+
+    70% {
+        transform: scale(1.2);
+    }
+
+    
+
+    /* 100% {
+      transform: scale(1);
+      box-shadow: 0
+    } */
+}
+
+.container img {
+    width: 120px;
+    text-decoration: none;
+}
+
+.container img {
+    animation: pulse 2s infinite;
+
+}
+
+.container p {
+   
+    font-family: "Arcade Normal";
+    color: black;
+    font-size: 12px;
+    margin: 0;
+    margin-top: 20px;
+    font-weight: bold;
+    font-family: "Arcade Normal";
+    
+}
+
+.container a{
+    text-decoration: none;
+}
+
+
+.heading {
+    display: inline-flex;
+    flex-direction: row;  
+    align-items: center;
+    margin-top: 20px;
+    
+}
+
+
+@keyframes spin-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+ 
+.heading img{
+    width: 40px;
+    animation: spin-animation 1s infinite;
+    /* padding-top: 20px; */
+    /* padding-right: 20px; */
+}
+
+
+body h1{
+    font-size: 20px;
+    margin: 0;
+    margin-top: 20px;
+    font-family: "Arcade Normal";
+    
+}
+
+body h2{
+    font-size: 12px;
+    margin: 0;
+    margin-top: 20px;
+    font-weight: bold;
+    font-family: "Arcade Normal";
+}
+
+
+body {
+    background: linear-gradient(-45deg, #5290ee, #d3db66);
+    background-size: 300% 300%;
+    animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 
+.carousel-container {
+    overflow: hidden;
+  }
+  
+  .carousel {
+    display: flex;
+    width: 100%;
+  }
+  
+  .carousel-item {
+    flex: 0 0 100%;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+  }
+ */
+
+/*  
+body .script-list .script-item .images img{
+    width: 50px;
+}
+
+.images {
+    width: 50px;
+} */
+
+
+body .script-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    width: 1000px;
+  }
+
+
+.image-popup {
+    background-color: blue;
+}

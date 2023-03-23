@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Learning Python</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/level.css' %}" />
+</head>
+
+<body>
+    <div class="heading">
+        <a href="/">
+            <img src="{% static 'images/home/logo.png' %}">
+        </a>
+    </div>
+    <h1>{{ heading }}</h1>
+    <div class="container">
+        <a href="/{{heading}}/utility">
+            <img src="{% static 'images/level/t1.png' %}">
+            <p>Utility</p>
+        </a>
+        <a href="/{{heading}}/fun">
+            <img src="{% static 'images/level/t2.png' %}">
+            <p>Fun</p>
+        </a>
+    </div>
+</body>
+
+</html>

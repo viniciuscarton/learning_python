@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Learning Python</title>
+  {% load static %}
+  {% load custom_filters %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/file.css' %}" />
+</head>
+
+<body>
+  <div class="heading">
+    <a href="/">
+      <img src="{% static 'images/home/logo.png' %}">
+    </a>
+  </div>
+  <h1 style="font-size: 12px;">{{ heading }} </h1>
+  <div class="script-list"
+    style="width: 1000px; display: flex; gap: 80px; row-gap: 30px; margin-top: 40px;  justify-content:space-evenly; flex-wrap: wrap; align-content: left;">
+    {% for script in script_list %}
+    {% with script_basename=script|basename|slice:'0:-3' %}
+
+    <div class="script-item">
+      <img class='images' src="{% static 'images/'|add:script_basename|add:'.png' %}"
+        style="width: 90px; height: auto; animation: pulse 2s infinite;"
+        data-description="{{ descriptions|lookup:script_basename }}">
+      <p style="font-family:Arcade Normal; font-size: 12px; font-weight: bold;">{{ script_basename|script_title }}</p>
+      <a href="/static/script/{{script_basename}}.py" download>
+        <img src="/static/images/button.png" style="width: 50px"> </a>
+      </a>
+    </div>
+    {% endwith %}
+    {% endfor %}
+  </div>
+  <div id="image-popup"
+    style="font-family:Arcade Normal; font-size: 12px; font-weight: bold; margin-top: 10px; border-radius: 6px; padding-left: 20px; padding-right: 10px;">
+  </div>
+
+  <script>
+    const images = document.querySelectorAll('.images');
+    const popup = document.getElementById('image-popup');
+    images.forEach(image => {
+      image.addEventListener('mouseover', () => {
+        popup.innerHTML = image.dataset.description;
+        popup.style.display = 'block';
+      });
+      image.addEventListener('mouseout', () => {
+        popup.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+
+</html>
