@@ -1,7 +1,7 @@
 @font-face {
-    font-family: "MyFont";
-    src: url("../static/fonts/Arcade.ttf") format("truetype");
-  }
+    font-family: "Arcade Normal";
+    src: url("/static/fonts/arcade.ttf") format("truetype");
+}
 
 
 body {
