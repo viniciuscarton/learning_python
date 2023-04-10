@@ -1,6 +1,8 @@
 # Learning Python
 'Learning Python' is a Django made repository for my Python mini projects. It stores Python scripts (.py) in an arcade-like interface and allows the user to download them. These scripts are divided by level (basic, intermediate, advanced) and purpose (utility, fun).  
 
+    ❗ Before running Learning Python, set a SECRET_KEY in settings.py ❗
+
 ## Content
 The app has three pages. The first one allows the user to select a level (basic, intermediate or advanced). The second one allows the user to select the purpose of the script (fun or utility). The third and last page is rendered accordingly to the previous two. It displays the scripts in animated, pulsating icons. Below the icons, there is the name of the script and a download button. If the user puts the cursor on top of the pulsating icons, a brief description of the script will appear at the bottom of the page. If the user clicks on the Python spinning logo at the top of the page, he or she will be directed to the index, first page. 
 
